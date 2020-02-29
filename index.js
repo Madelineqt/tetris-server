@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const mongoose = require("mongoose")
 const cors = require("cors")
 const leaderboardrouter = require("./leaderboard.routes")
-mongoose.connect("mongodb://127.0.0.1:27017/tetris", { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb+srv://uwu:uwu@tetris-sfd1x.mongodb.net/tetris", { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.connection.on("error", () => {
   console.log("fallo la conexion a mongodb")
   process.exit(1)
