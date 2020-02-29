@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser')
@@ -19,6 +20,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use('/leaderboard', leaderboardrouter)
 
 
-app.listen(3001, function () {
-  console.log('Example app listening on port 3001!');
+app.listen(process.env.PORT, function () {
+  console.log(`Example app listening on port ${process.env.PORT}`);
 });
